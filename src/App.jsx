@@ -1,10 +1,20 @@
 import './App.css';
-// import "./font-awesome.css";
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolderOpen } from '@fortawesome/free-regular-svg-icons';
+import { faCubes, faShekelSign } from '@fortawesome/free-solid-svg-icons';
+import { faAccusoft } from '@fortawesome/free-brands-svg-icons';
 
 class OnePage extends React.Component{
   render() {
     const menuElements = ["Home", "About", "Services", "Portfolio", "Team", "Pricing", "Drop Down", "Contact"];
+    const icons = [<FontAwesomeIcon icon={faFolderOpen} />, <FontAwesomeIcon icon={faCubes} />, 
+    <FontAwesomeIcon icon={faAccusoft} />, <FontAwesomeIcon icon={faShekelSign} />];
+    const blockNames = ["Lorem lpsum", "Sed ut perspiciatis", "Magni Dolores", "Nemo Enim"];
+    const blockText = ["So delightful up dissimilar by unreserved it",
+                        "Stronger unpacked felicity to of mistaken",
+                      "Raptures stanhill my greatest mistaken or",
+                    "Discourse otherwise disposing as it of strangers forfeited"];
     return (
       <div>
         <header className='header'>
@@ -18,7 +28,6 @@ class OnePage extends React.Component{
               )}
             </ul>
             {createButton()}
-            {/* <button className='button'>Get started</button> */}
           </div>
         </header>
         <div className='content'>
@@ -27,6 +36,15 @@ class OnePage extends React.Component{
             <p className='largeText colorDarkBlue'>Website Template</p>
             <p className='textTeamDesigners colorDarkGrey'>We are team of talanted designers</p>
             {createButton()}
+          </div>
+          <div className='secondPartOfContentWithBlocks'>
+            {icons.map((icon, i) => (
+              <div className='containerOfBlock' key={`Block ${i}`}>
+                <p className='icon'>{icon}</p> 
+                <p className='blockName colorDarkBlue'>{blockNames[i]}</p>
+                <p className='blockText'>{blockText[i]}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -39,27 +57,5 @@ function createButton() {
     <button className='button'>Get started</button>
   )
 }
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//        </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default OnePage;

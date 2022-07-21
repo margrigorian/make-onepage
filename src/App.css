@@ -47,11 +47,10 @@ button{
   cursor: pointer;
 }
 .button:hover{
-  box-shadow: 4px 4px 2px grey;
-
+  box-shadow: 6px 6px 4px rgb(101, 100, 100);;
 }
 .colorDarkBlue{
-  color: rgb(21, 73, 114);
+  color: rgb(14, 51, 78);
 }
 .colorDarkGrey{
   color: rgb(67, 66, 66);
@@ -62,7 +61,7 @@ button{
   background-size: 100% 100%;
 }
 .firstPartOfContentWithLargeText{
-  padding-top: 8%; 
+  padding: 8% 0; 
   text-align: center;
 }
 .largeText{
@@ -72,4 +71,27 @@ button{
 .textTeamDesigners{
   font-size: 20px;
   padding: 0.8% 0 1.5% 0;
+}
+
+.secondPartOfContentWithBlocks{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 8% 11% 8%;
+}
+.containerOfBlock{
+  width: 15%;
+  padding: 3% 2%;
+  background-color: rgba(218, 216, 216, 0.7);
+  cursor: pointer;
+}
+.containerOfBlock:hover{
+  box-shadow: 10px 10px 20px rgb(14, 51, 78);
+}
+.icon{
+  font-size: 30px;
+  color: rgb(32, 130, 191);
+}
+.blockName{
+  font-weight: bold;
+  padding: 7% 0;
 }
