@@ -10,7 +10,7 @@
 }
 .logo{
   font-size: 30px;
-  color: rgb(21, 73, 114);
+  cursor: pointer;
 }
 .nav{
   width: 70%;
@@ -21,13 +21,15 @@
 }
 .menu{
   width: 85%;
-  color: rgb(21, 73, 114);
   display: flex;
   justify-content: space-evenly;
 }
 li{
   list-style-type: none;
   cursor: pointer;
+}
+li:hover{
+  color: rgb(32, 130, 191);
 }
 .colorOfMenuEl{
   color:rgb(32, 130, 191);
@@ -44,7 +46,30 @@ button{
   color: white;
   cursor: pointer;
 }
+.button:hover{
+  box-shadow: 4px 4px 2px grey;
 
-/* .content{
-  
-} */
+}
+.colorDarkBlue{
+  color: rgb(21, 73, 114);
+}
+.colorDarkGrey{
+  color: rgb(67, 66, 66);
+}
+
+.content{
+  background-image: url(elegant-white-background-free-vector.jpg);
+  background-size: 100% 100%;
+}
+.firstPartOfContentWithLargeText{
+  padding-top: 8%; 
+  text-align: center;
+}
+.largeText{
+  font-size: 40px;
+  font-weight: bold;
+}
+.textTeamDesigners{
+  font-size: 20px;
+  padding: 0.8% 0 1.5% 0;
+}
